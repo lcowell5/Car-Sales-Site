@@ -17,12 +17,7 @@ this.document.addEventListener('mouseup', (event) => {
     }
 });
 
-function heartFill () {
-    if (heart.getAttribute('src') === "../Scrimba/Car Sales Site/assets/save.svg") {
-        heart.setAttribute('src', "../Scrimba/Car Sales Site/assets/save-filled.svg");
-    } else {
-        heart.setAttribute('src', "../Scrimba/Car Sales Site/assets/save.svg");
-    }
-};
-
-heart.addEventListener('click', heartFill);
+function changeHeart(x) {
+    x.classList.toggle("fas")
+    x.classList.toggle("far")
+}

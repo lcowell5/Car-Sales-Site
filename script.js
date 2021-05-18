@@ -17,7 +17,16 @@ this.document.addEventListener('mouseup', (event) => {
     }
 });
 
-function changeHeart(x) {
-    x.classList.toggle("fas")
-    x.classList.toggle("far")
-}
+let heart = document.querySelectorAll('.car-action');
+
+
+heart.forEach(item => {
+    item.addEventListener('click', () => {
+        if (item.getAttribute('src') === "assets/save.svg") {
+            item.setAttribute('src', "assets/save-filled.svg");
+        } else {
+            item.setAttribute('src', "assets/save.svg");
+        }
+    }) 
+})
+
